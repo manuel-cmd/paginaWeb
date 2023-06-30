@@ -3,7 +3,6 @@
 import Galeria from "./Galeria";
 
 function InfoGaleria() {
-  console.log("en galeria");
   return <Galeria></Galeria>;
 }
 

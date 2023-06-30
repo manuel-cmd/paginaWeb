@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Alumno.css";
 import InfoAlumno from "./InfoAlumno";
@@ -10,8 +10,8 @@ function Alumno(props) {
   //const navigate = useNavigate();
   //const {(profileImageSrc, name, grade, description, studentItems)} = studentData;
   console.log("de cada alumno son: ", props);
-  const [nombre] = useState(props.items.nombre);
-  const [grado] = useState(props.items.grado);
+  const [nombre, setNombre] = useState(props.items.nombre);
+  const [grado, setGrado] = useState(props.items.grado);
   const [interes] = useState(props.items.interes);
   const [laboratorio] = useState(props.items.laboratorio);
   const [correo] = useState(props.items.correo);
@@ -29,6 +29,8 @@ function Alumno(props) {
     tipo,
   };
   //console.log("props: ", props);
+  useEffect(() => {}, [nombre]);
+
   return (
     <div className="conteneroInfoAlumno">
       <div className="infoAlumno">
@@ -37,9 +39,9 @@ function Alumno(props) {
           <Link to={`${ROUTES.INFOALUMNO}/:id`} state={info}>
             {/*<Link to={ROUTES.INFOALUMNO} state={"any type"}>*/}
             <a href={<InfoAlumno />}>
-              {imagen !== "" && (
+              {props.items?.imagen !== "" && (
                 <img
-                  src={require(`./img/${imagen}`)}
+                  src={require(`./img/${props.items?.imagen}`)}
                   alt="Imagen del alumno"
                   className="imagenAlumno"
                 />
@@ -48,18 +50,18 @@ function Alumno(props) {
           </Link>
         </div>
         <div className="info">
-          <div className="nombreAlumno">{nombre}</div>
+          <div className="nombreAlumno">{props.items.nombre}</div>
           <br /> <br />
-          <div>Grado de estudio: {grado}</div>
+          <div>Grado de estudio: {props.items.grado}</div>
           <br />
           <div>Tesis: {"Estudio de"}</div>
           <br />
-          <div>Áreas de interés: {interes}</div>
+          <div>Áreas de interés: {props.items.interes}</div>
           <br />
-          <div>Laboratorio: {laboratorio}</div>
+          <div>Laboratorio: {props.items.laboratorio}</div>
           <br />
           <div>
-            Contacto {correo}, {telefono}
+            Contacto {props.items.correo}, {props.items.telefono}
           </div>
           <br />
         </div>

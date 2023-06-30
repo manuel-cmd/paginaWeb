@@ -39,7 +39,7 @@ function Menu_no_r() {
               <a href={<InfoGaleria />}>Galeria</a>
             </li>
           </Link>
-          <Link to={ROUTES.INVESTIGACIÓN} style={{ textDecoration: "none" }}>
+          <Link to={ROUTES.CALENDARIO} style={{ textDecoration: "none" }}>
             <li>
               <a href={<Calendario />}>Calendario</a>
             </li>

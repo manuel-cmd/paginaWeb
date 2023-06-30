@@ -29,6 +29,8 @@ const Modal = ({
   return (
     <div className="overlay dismiss" onClick={handleClick}>
       <img src={require(`./img/${clickImage}`)} alt="bigger picture" />
+      <div>Descripcion: </div>
+
       <span className="dismiss" onClick={handleClick}>
         X
       </span>

@@ -33,6 +33,7 @@ function InfoAlumno() {
     const opcion = e.target.value;
     console.log(opcion);
     setDatos(opcion);
+    console.log("datos es: ", datos);
   };
 
   /*const handlerCargarDatos2 = function (e) {

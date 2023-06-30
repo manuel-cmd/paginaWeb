@@ -28,7 +28,7 @@ function App() {
           <Route path={ROUTES.ALUMNOS} element={<Alumnos />} />
           <Route path={ROUTES.TRAYECTORIA} element={<Trayectoria />} />
           <Route path={ROUTES.INFOALUMNO + "/:id"} element={<InfoAlumno />} />
-          <Route path={ROUTES.INVESTIGACIÓN} element={<Calendario />} />
+          <Route path={ROUTES.CALENDARIO} element={<Calendario />} />
           <Route path={ROUTES.INTERES} element={<TemasInteres />} />
           <Route path={ROUTES.CONTACTO} element={<Contacto />} />
           <Route path={ROUTES.GALERIA} element={<InfoGaleria />} />

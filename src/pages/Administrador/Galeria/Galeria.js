@@ -1,5 +1,4 @@
-//import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 
 //import { useEffect } from "react";
 
@@ -14,7 +13,7 @@ function Galeria() {
   const [clickImage, setClickImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
-  console.log("datos son: ", datos);
+  //console.log("datos son: ", datos);
 
   const handleClick = (item, index) => {
     setCurrentIndex(index);
@@ -42,21 +41,32 @@ function Galeria() {
 
   const handleRotationLeft = () => {
     const totalLength = datos.length;
+    console.log("currentIndex es: ", currentIndex);
 
     if (currentIndex === 0) {
       setCurrentIndex(totalLength - 1);
       const newUrl = datos[totalLength - 1].ubicacion;
       setClickImage(newUrl);
+      console.log("clickImage es: ", clickImage);
+      console.log(
+        "datos[totallength - 1] es: ",
+        datos[totalLength - 1]?.ubicacion
+      );
+      console.log("newUrl es: ", newUrl);
     }
+
     const newIndex = currentIndex - 1;
     const newUrl = datos.filter((item) => {
       return datos.indexOf(item) === newIndex;
     });
 
     const newItem = newUrl[0].ubicacion;
+    //console.log("newItem es: ", newItem[0].ubicacion);
     setClickImage(newItem);
     setCurrentIndex(newIndex);
   };
+
+  useEffect(() => {}, [clickImage]);
 
   return (
     <div className="row">
@@ -66,7 +76,7 @@ function Galeria() {
             <img
               src={require(`./img/${image.ubicacion}`)}
               alt="Imagen del alumno"
-              className="imagenTrayectoria "
+              className="imagenGaleria "
               onClick={() => handleClick(image, index)}
             />
           )}
