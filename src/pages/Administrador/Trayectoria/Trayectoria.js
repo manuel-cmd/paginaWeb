@@ -21,8 +21,19 @@ function Trayectoria() {
         <br />
         <br />
         <div className="informacion">
-          <div className="contenedorImagenTrayectoria">
-            <img src={Profesor} className="imagenProfesor" alt="" />
+          <div className="conjunto">
+            <div className="contenedorImagenTrayectoria">
+              <img src={Profesor} className="imagenProfesor" alt="" />
+            </div>
+            <br />
+            <a
+              className=" perfil"
+              target="_blank"
+              href="https://ipn.elsevierpure.com/es/persons/jes%C3%BAs-alberto-mart%C3%ADnez-castro"
+            >
+              {" "}
+              Perfil{" "}
+            </a>
           </div>
           <div className="contenedorInfo">
             Miembro del Sistema Nacional de Investigadores (I), actualmente
@@ -45,13 +56,6 @@ function Trayectoria() {
           </div>
         </div>
 
-        <a
-          className="contenedorInfo perfil"
-          href="https://ipn.elsevierpure.com/es/persons/jes%C3%BAs-alberto-mart%C3%ADnez-castro"
-        >
-          {" "}
-          Perfil{" "}
-        </a>
         <div className="proyectos"></div>
       </div>
       {/*<InicioAlumno></InicioAlumno>

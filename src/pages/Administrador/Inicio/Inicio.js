@@ -16,7 +16,9 @@ function Inicio() {
     <div>
       <section class="imagen-institucion">
         <img src={principal} alt="Imagen de la institución" />
-        <div class="texto-sobre-imagen">Dr. Jesús Alberto Martínez Castro</div>
+        <div class="texto-sobre-imagen-inicio">
+          Dr. Jesús Alberto Martínez Castro
+        </div>
       </section>
 
       <section class="cards">
@@ -42,6 +44,7 @@ function Inicio() {
               </Link>
             </div>
           </div>
+          {/*
           <div
             class="card"
             onmouseenter="mostrarInfo(this)"
@@ -51,7 +54,7 @@ function Inicio() {
               <div class="card-front">
                 <img src={bit_cuantico} alt="Imagen de la card" />
                 <h3>Líneas de investigación</h3>
-              </div>
+  </div>
               <div class="card-back">
                 <h3>Temas de investigación</h3>
                 <p>
@@ -61,7 +64,7 @@ function Inicio() {
                 <a href="">Ir a la sección</a>
               </div>
             </div>
-          </div>
+  </div>*/}
 
           <div
             class="card"

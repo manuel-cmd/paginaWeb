@@ -100,14 +100,18 @@ const components = {
           <div>
             <div>Pon algo mas</div>
             {console.log("hola desde calendario")}
-            <a href="google.com">Seminario</a>
+            <a target="_blank" href="https://meet.google.com/owq-wwrz-wti">
+              Seminario
+            </a>
           </div>
         );
       default:
         return (
           <div>
             {console.log("hola desde calendario alterno")}
-            <a href="google.com">No hay nada</a>
+            <a target="_blank" href="https://meet.google.com/owq-wwrz-wti">
+              Seminario
+            </a>
           </div>
         );
     }

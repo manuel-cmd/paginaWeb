@@ -6,7 +6,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="">
+    <div className="footer">
       <footer>&copy; 2023 - Derechos reservados</footer>
     </div>
   );

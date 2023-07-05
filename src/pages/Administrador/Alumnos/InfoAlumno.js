@@ -103,7 +103,7 @@ function InfoAlumno() {
         <div className="infoPerfil">
           <div className="nombreAlumnoPerfil">{nombre}</div>
           <br /> <br />
-          <div>Grado de estudio: {grado}</div>
+          {grado != "" && <div>Grado de estudio: {grado}</div>}
           <br />
           <div>Áreas de interés: {interes}</div>
           <br />
@@ -140,57 +140,58 @@ function InfoAlumno() {
         {tipo[datos].datos.map((item, i) => (
           <div className="infoTrabajo">
             <table className="tablaTrabajosAlumno">
-              <tr>
-                <td className="celdaNombre celda">
-                  <div className="nombreTrabajo">
-                    <a href="">{item}</a>
-                  </div>
-                </td>
-                <td className="celdaAño celda pos">
-                  {tipo[datos].tipo[i] === "Video" && (
-                    <a
-                      href=""
-                      onClick={() =>
-                        handleClick(tipo[datos].años[i], tipo[datos].tipo[i], i)
-                      }
-                    >
-                      Ver
-                    </a>
-                  )}
-                  {tipo[datos].tipo[i] === "Documento" && (
-                    <a href={require(`../Alumnos/${tipo[datos].años[i]}`)}>
-                      Ver
-                    </a>
-                  )}
-                </td>
-              </tr>
-              {
-                <div>
-                  {clickImage && (
-                    <ModalVideo
-                      clickImage={clickImage}
-                      clickTipo={clickTipo}
-                      setClickImage={setClickImage}
-                    />
-                  )}
-                </div>
-              }
-              {/*clickImage && (
-                <ModalVideo
-                  clickImage={clickImage}
-                  clickTipo={clickTipo}
-                  setClickImage={setClickImage}
-                />
-              )*/}
+              {tipo[datos].años[i] != undefined && (
+                <tr>
+                  {console.log("esta vacio: ", tipo[datos].años[i])}
+                  <td className="celdaNombre celda">
+                    <div className="nombreTrabajo">{item}</div>
+                  </td>
+                  <td className="celdaAño celda pos">
+                    {tipo[datos].tipo[i] === "Video" && (
+                      <a
+                        href=""
+                        onClick={() =>
+                          handleClick(
+                            tipo[datos].años[i],
+                            tipo[datos].tipo[i],
+                            i
+                          )
+                        }
+                      >
+                        Ver
+                      </a>
+                    )}
+                    {tipo[datos].tipo[i] === "Documento" && (
+                      <a
+                        target="_blank"
+                        href={require(`../Alumnos/${tipo[datos].años[i]}`)}
+                      >
+                        Ver
+                      </a>
+                    )}
+                  </td>
+                </tr>
+              )}
+
+              <div>
+                {clickImage && (
+                  <ModalVideo
+                    clickImage={clickImage}
+                    clickTipo={clickTipo}
+                    setClickImage={setClickImage}
+                  />
+                )}
+              </div>
             </table>
           </div>
         ))}
       </div>
       <br />
       <br />
+      {/*
       <a href="./cv/curriculum.txt" download className="descargarCurriculum">
         Currículum
-      </a>
+                </a>*/}
       <br />
       <br />
       <br />

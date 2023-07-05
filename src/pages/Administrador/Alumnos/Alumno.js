@@ -51,17 +51,19 @@ function Alumno(props) {
         </div>
         <div className="info">
           <div className="nombreAlumno">{props.items.nombre}</div>
-          <br /> <br />
-          <div>Grado de estudio: {props.items.grado}</div>
           <br />
-          <div>Tesis: {"Estudio de"}</div>
+          {props.items.grado != "" && (
+            <div>Grado de estudio: {props.items.grado}</div>
+          )}
           <br />
+          {props.items.archivo != "" && <div>Tesis: {props.items.archivo}</div>}
           <div>Áreas de interés: {props.items.interes}</div>
           <br />
-          <div>Laboratorio: {props.items.laboratorio}</div>
+          <div>Laboratorio: {" " + props.items.laboratorio}</div>
           <br />
           <div>
-            Contacto {props.items.correo}, {props.items.telefono}
+            Contacto {props.items.correo} {" , "}
+            {props.items.telefono}
           </div>
           <br />
         </div>

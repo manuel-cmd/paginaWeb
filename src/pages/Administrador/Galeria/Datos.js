@@ -24,10 +24,6 @@ const datos = [
     descripcion: "",
   },
   {
-    ubicacion: "2017_7.jpg",
-    descripcion: "",
-  },
-  {
     ubicacion: "arreglo_1.jpg",
     descripcion: "",
   },
@@ -134,18 +130,6 @@ const datos = [
   },
   {
     ubicacion: "foto_15.jpg",
-    descripcion: "",
-  },
-  {
-    ubicacion: "foto_16.jpg",
-    descripcion: "",
-  },
-  {
-    ubicacion: "foto_17.jpg",
-    descripcion: "",
-  },
-  {
-    ubicacion: "foto_18.jpg",
     descripcion: "",
   },
   {

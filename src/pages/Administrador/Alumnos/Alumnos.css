@@ -28,11 +28,12 @@ img{
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-decoration: underline;
+    color: #e7dac2;
     text-decoration-color: #e7dac2;
     font-size: 3rem;
     z-index: 99;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
