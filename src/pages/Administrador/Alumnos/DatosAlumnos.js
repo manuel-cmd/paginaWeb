@@ -27,12 +27,6 @@ const datos = [
             años: ["img/videosA18/byron_gonzalez.pdf"],
             tipo: ["Documento"],
           },
-          {
-            nombre: "Artículos",
-            datos: [],
-            años: [],
-            tipo: ["Documento"],
-          },
         ],
       },
     ],

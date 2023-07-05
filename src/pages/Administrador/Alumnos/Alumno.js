@@ -36,7 +36,7 @@ function Alumno(props) {
       <div className="infoAlumno">
         <div className="contenedorImagen item_alumno">
           {/*//pathname: `${ROUTES.INFOALUMNO}/${nombre}`,*/}
-          <Link to={`${ROUTES.INFOALUMNO}/:id`} state={info}>
+          <Link to={`${ROUTES.INFOALUMNO}/:id`} state={props.items}>
             {/*<Link to={ROUTES.INFOALUMNO} state={"any type"}>*/}
             <a href={<InfoAlumno />}>
               {props.items?.imagen !== "" && (
