@@ -18,7 +18,9 @@ function Trayectoria() {
             src={hawc}
             alt="Imagen de la institución"
           />
-          <div className="nombre">Dr. Jesús Alberto Martínez Castro</div>
+          <div className="texto-sobre-imagen-inicio">
+            Dr. Jesús Alberto Martínez Castro
+          </div>
         </section>
         <div className="nombreOculto">Dr. Jesús Alberto Martínez Castro</div>
         <br />
