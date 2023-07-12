@@ -5,6 +5,8 @@ const Modal = ({
   handleRotationRight,
   setClickImage,
   handleRotationLeft,
+  descriptionImage,
+  setDescriptionImage,
 }) => {
   const handleClick = (e) => {
     if (e.target.classList.contains("dismiss")) {
@@ -28,9 +30,12 @@ const Modal = ({
 
   return (
     <div className="overlay dismiss" onClick={handleClick}>
-      <img src={require(`./img/${clickImage}`)} alt="bigger picture" />
-      <div>Descripcion: </div>
-
+      <div className="imagenDeGaleria">
+        <div className="imagenBien">
+          <img src={require(`./img/${clickImage}`)} alt="bigger picture" />
+        </div>
+        <div className="informacionImagen">Descripcion: {descriptionImage}</div>
+      </div>
       <span className="dismiss" onClick={handleClick}>
         X
       </span>

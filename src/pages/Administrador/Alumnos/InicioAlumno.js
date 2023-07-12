@@ -12,6 +12,10 @@ import alumno6 from "./img/alumno6.jpg";
 function InicioAlumno() {
   return (
     <div>
+      <br />
+      <br />
+      <br />
+      <br />
       <section class="contenedor-img">
         <div class="texto-sobre-imagen">Alumnos</div>
         <div class="galeria">

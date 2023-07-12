@@ -67,6 +67,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
+    color: #e7dac2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 

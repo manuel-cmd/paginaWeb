@@ -11,13 +11,16 @@ import "./Galeria.css";
 
 function Galeria() {
   const [clickImage, setClickImage] = useState(null);
+  const [descriptionImage, setDescriptionImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
   //console.log("datos son: ", datos);
 
   const handleClick = (item, index) => {
+    console.log("ha detectado: ", item, index);
     setCurrentIndex(index);
     setClickImage(item.ubicacion);
+    setDescriptionImage(item.descripcion);
   };
 
   const handleRotationRight = () => {
@@ -26,7 +29,9 @@ function Galeria() {
     if (currentIndex + 1 >= totalLength) {
       setCurrentIndex(0);
       const newUrl = datos[0].ubicacion;
+      const newDesc = datos[0].descripcion;
       setClickImage(newUrl);
+      setDescriptionImage(newDesc);
       return;
     }
     const newIndex = currentIndex + 1;
@@ -35,41 +40,57 @@ function Galeria() {
     });
 
     const newItem = newUrl[0].ubicacion;
+    const newDescItem = newUrl[0].descripcion;
     setClickImage(newItem);
+    setDescriptionImage(newDescItem);
     setCurrentIndex(newIndex);
   };
 
   const handleRotationLeft = () => {
     const totalLength = datos.length;
-    console.log("currentIndex es: ", currentIndex);
+    //console.log("currentIndex es: ", currentIndex, "total length es: ", totalLength);
 
     if (currentIndex === 0) {
       setCurrentIndex(totalLength - 1);
-      const newUrl = datos[totalLength - 1].ubicacion;
+      const newUrl = datos[totalLength - 1]?.ubicacion;
+      const newDesc = datos[totalLength - 1].descripcion;
       setClickImage(newUrl);
-      console.log("clickImage es: ", clickImage);
-      console.log(
-        "datos[totallength - 1] es: ",
-        datos[totalLength - 1]?.ubicacion
-      );
-      console.log("newUrl es: ", newUrl);
+      setDescriptionImage(newDesc);
+      //console.log("clickImage es: ", clickImage);
+      //console.log("datos[totallength - 1] es: ", datos[totalLength - 1]?.ubicacion);
+      //console.log("newUrl es: ", newUrl);
     }
 
-    const newIndex = currentIndex - 1;
-    const newUrl = datos.filter((item) => {
+    let newIndex = currentIndex - 1;
+    //console.log("newIndex es: ", newIndex);
+
+    let newUrl = datos.filter((item) => {
       return datos.indexOf(item) === newIndex;
     });
+    if (newIndex == -1) {
+      newUrl = [datos[totalLength - 1]];
+      newIndex = totalLength - 1;
+      //setCurrentIndex(totalLength - 1);
+    }
+    //console.log("newUrl es: ", newUrl);
 
     const newItem = newUrl[0].ubicacion;
-    //console.log("newItem es: ", newItem[0].ubicacion);
+    const newDescItem = newUrl[0].descripcion;
+    //console.log("newItem es: ", newItem);
     setClickImage(newItem);
+    setDescriptionImage(newDescItem);
     setCurrentIndex(newIndex);
+    //setCurrentIndex(newIndex);
   };
 
   useEffect(() => {}, [clickImage]);
 
   return (
     <div className="row">
+      <br />
+      <br />
+      <br />
+      <br />
       {datos.map((image, index) => (
         <div key={index} className="cardGaleria">
           {image.ubicacion !== "" && (
@@ -88,8 +109,11 @@ function Galeria() {
           handleRotationRight={handleRotationRight}
           setClickImage={setClickImage}
           handleRotationLeft={handleRotationLeft}
+          descriptionImage={descriptionImage}
+          setDescriptionImage={setDescriptionImage}
         />
       )}
+      <br />
     </div>
   );
 }

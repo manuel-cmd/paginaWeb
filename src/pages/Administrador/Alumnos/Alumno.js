@@ -50,7 +50,12 @@ function Alumno(props) {
           </Link>
         </div>
         <div className="info">
-          <div className="nombreAlumno">{props.items.nombre}</div>
+          <Link to={`${ROUTES.INFOALUMNO}/:id`} state={props.items}>
+            {/*<Link to={ROUTES.INFOALUMNO} state={"any type"}>*/}
+            <a href={<InfoAlumno />}>
+              <div className="nombreAlumno">{props.items.nombre}</div>
+            </a>
+          </Link>
           <br />
           {props.items.grado != "" && (
             <div>Grado de estudio: {props.items.grado}</div>

@@ -1,15 +1,15 @@
 const datos = [
   {
     ubicacion: "2017_1.jpg",
-    descripcion: "",
+    descripcion: "Descripcion prueba 1",
   },
   {
     ubicacion: "2017_2.jpg",
-    descripcion: "",
+    descripcion: "Descripcion prueba 2",
   },
   {
     ubicacion: "2017_3.jpg",
-    descripcion: "",
+    descripcion: "Descripcion prueba 3",
   },
   {
     ubicacion: "2017_4.png",

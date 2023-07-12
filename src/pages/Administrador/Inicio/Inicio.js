@@ -14,6 +14,9 @@ import { ROUTES } from "../../../constants/routes";
 function Inicio() {
   return (
     <div>
+      <br />
+      <br />
+      <br />
       <section class="imagen-institucion">
         <img src={principal} alt="Imagen de la institución" />
         <div class="texto-sobre-imagen-inicio">
@@ -44,27 +47,35 @@ function Inicio() {
               </Link>
             </div>
           </div>
-          {/*
+
           <div
             class="card"
             onmouseenter="mostrarInfo(this)"
             onmouseleave="ocultarInfo(this)"
           >
             <div class="card-inner">
-              <div class="card-front">
-                <img src={bit_cuantico} alt="Imagen de la card" />
-                <h3>Líneas de investigación</h3>
-  </div>
-              <div class="card-back">
-                <h3>Temas de investigación</h3>
-                <p>
-                  Investigaciones sobre cómputo cuántico, probabilidad, machine
-                  learning, etc.
-                </p>
-                <a href="">Ir a la sección</a>
-              </div>
+              <a
+                href={require(`./Presentacion/pasarela_sep_2014.pdf`)}
+                target="_blank"
+              >
+                <div class="card-front">
+                  <img src={bit_cuantico} alt="Imagen de la card" />
+
+                  <h3>Presentación</h3>
+                </div>
+                <div class="card-back">
+                  <h3>Presentación</h3>
+                  <p>Presentación de trayectoria</p>
+                  <a
+                    href={require(`./Presentacion/pasarela_sep_2014.pdf`)}
+                    target="_blank"
+                  >
+                    Ir a la sección
+                  </a>
+                </div>
+              </a>
             </div>
-  </div>*/}
+          </div>
 
           <div
             class="card"

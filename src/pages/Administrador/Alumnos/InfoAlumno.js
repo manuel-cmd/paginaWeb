@@ -93,6 +93,9 @@ function InfoAlumno() {
   return (
     <div className="informacionAlumnoPerfil">
       <br /> <br />
+      <br />
+      <br />
+      <br />
       <div className="infoAlumnoPerfil">
         <div className="contenedorImagenPerfil">
           <img

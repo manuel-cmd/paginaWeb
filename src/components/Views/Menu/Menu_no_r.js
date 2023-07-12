@@ -12,7 +12,6 @@ import Inicio from "../../../pages/Administrador/Inicio/Inicio";
 //import TemasInvestigacion from "../../../pages/Administrador/Investigacion/TemasInvestigacion";
 //import Contacto from "../../../pages/Administrador/Contacto/Contacto";
 import Calendario from "../../../pages/Administrador/Calendario/Calendario";
-//import Galeria from "../../../pages/Administrador/Galeria/Galeria";
 import InfoGaleria from "../../../pages/Administrador/Galeria/InfoGaleria";
 
 function Menu_no_r() {

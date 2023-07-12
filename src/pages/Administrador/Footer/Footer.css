@@ -23,4 +23,5 @@ html, body{
     padding-top: 40px;
     color: #fff;
     width: 100%;
+    position: fixed;
 }

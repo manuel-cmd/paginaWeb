@@ -7,6 +7,10 @@ import hawc from "./img/Hawc.jpg";
 function Trayectoria() {
   return (
     <div>
+      <br />
+      <br />
+      <br />
+
       <div className="trayectoria">
         <section class="imagenTrayectoria">
           <img
@@ -19,7 +23,7 @@ function Trayectoria() {
         <div className="nombreOculto">Dr. Jesús Alberto Martínez Castro</div>
         <br />
         <br />
-        <br />
+
         <div className="informacion">
           <div className="conjunto">
             <div className="contenedorImagenTrayectoria">
@@ -61,6 +65,9 @@ function Trayectoria() {
       {/*<InicioAlumno></InicioAlumno>
       <Alumno></Alumno>
   <Alumno></Alumno>*/}
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
