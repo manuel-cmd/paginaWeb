@@ -14,6 +14,14 @@ import Calendario from "./pages/Administrador/Calendario/Calendario";
 import { Route, Routes } from "react-router-dom";
 import { ROUTES } from "./constants/routes";
 
+/*
+  Cambios en los archivos:
+    - App.css
+    - Menu_no_r2.css
+    - Inicio_ventana.css 158
+    - Alumno.css
+ */
+
 function App() {
   return (
     <div className="body">

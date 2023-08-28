@@ -36,17 +36,20 @@ function Alumno(props) {
       <div className="infoAlumno">
         <div className="contenedorImagen item_alumno">
           {/*//pathname: `${ROUTES.INFOALUMNO}/${nombre}`,*/}
-          <Link to={`${ROUTES.INFOALUMNO}/:id`} state={props.items}>
+          <Link
+            to={`${ROUTES.INFOALUMNO}/:id`}
+            state={props.items}
+            className="enlaceAlumno"
+          >
             {/*<Link to={ROUTES.INFOALUMNO} state={"any type"}>*/}
-            <a href={<InfoAlumno />}>
-              {props.items?.imagen !== "" && (
-                <img
-                  src={require(`./img/${props.items?.imagen}`)}
-                  alt="Imagen del alumno"
-                  className="imagenAlumno"
-                />
-              )}
-            </a>
+
+            {props.items?.imagen !== "" && (
+              <img
+                src={require(`./img/${props.items?.imagen}`)}
+                alt="Imagen del alumno"
+                className="imagenAlumno"
+              />
+            )}
           </Link>
         </div>
         <div className="info">
@@ -73,8 +76,6 @@ function Alumno(props) {
           <br />
         </div>
       </div>
-      <br />
-      <br />
       <br />
     </div>
   );

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./Trayectoria.css";
 import Profesor from "./img/profilepic.jpg";
 import hawc from "./img/Hawc.jpg";
 
 function Trayectoria() {
+  useEffect(() => {}, []);
+
   return (
     <div>
       <br />
@@ -31,6 +33,7 @@ function Trayectoria() {
             <div className="contenedorImagenTrayectoria">
               <img src={Profesor} className="imagenProfesor" alt="" />
             </div>
+            <br />
             <br />
             <a
               className=" perfil"

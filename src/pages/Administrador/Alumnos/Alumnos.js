@@ -12,18 +12,26 @@ function Alumnos() {
   //const [currentIndex, setCurrentIndex] = useState(null);
   //const [datosAlumnos, setDatos] = useState(datos);
   const [semestre, setSemestre] = useState(0);
+  const [sem, setSem] = useState(0);
   const [alumnos, setAlumnos] = useState();
 
   const handlerCargarDatos = function (e) {
     const opcion = e.target.value;
     console.log(opcion);
     setSemestre(e.target.value);
+
     console.log("semestre es: ", semestre);
   };
 
-  useEffect(() => {}, [semestre]);
+  useEffect(() => {
+    setSem(datos[semestre].semestre);
+    console.log("fin: ", sem);
+  }, [semestre]);
 
   console.log("los datos son: ", datos);
+
+  const cambia = function (semes) {};
+
   return (
     <div>
       <InicioAlumno></InicioAlumno>
@@ -33,11 +41,15 @@ function Alumnos() {
           <select
             name="tipo"
             id="seltipo"
-            onClick={handlerCargarDatos}
+            onClick={(e) => setSemestre(e.target.value)}
             className="trabajos"
           >
             {datos.map((item, i) => (
-              <option key={"tipo" + i} value={i}>
+              <option
+                key={"tipo" + i}
+                value={i}
+                onChange={cambia(item.semestre)}
+              >
                 {item.semestre}
               </option>
             ))}

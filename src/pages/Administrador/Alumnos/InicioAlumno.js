@@ -17,7 +17,7 @@ function InicioAlumno() {
       <br />
       <br />
       <section class="contenedor-img">
-        <div class="texto-sobre-imagen">Alumnos</div>
+        {/*<div class="texto-sobre-imagen">Alumnos</div>*/}
         <div class="galeria">
           <div class="galeria_item">
             <img src={alumno1} alt="Imagen de alumnos 1" />
@@ -49,8 +49,6 @@ function InicioAlumno() {
 
       <section class="contenedor-alumnos">
         <h2>Trabajos de los alumnos</h2>
-
-        <div class="cards-alumnos" id="cards-alumnos"></div>
       </section>
     </div>
   );

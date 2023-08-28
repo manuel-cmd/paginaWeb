@@ -4,7 +4,6 @@ html, body{
 }
 
 .footer{
-    
     margin-bottom: 0px;
     font-size: 1rem;
     width: 100%;
@@ -12,16 +11,11 @@ html, body{
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #1b1b1b;
+    background-color: #078196;
     font-weight: bold;
     bottom: 0px;
-    margin-bottom: 0px;
-    left: 0;
-    right: 0;
-    background: #111;
-    height: 50px;
-    padding-top: 40px;
+    height: 20px;
+    padding-top: 20px;
     color: #fff;
-    width: 100%;
     position: fixed;
 }

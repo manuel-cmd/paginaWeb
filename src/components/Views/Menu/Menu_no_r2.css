@@ -12,7 +12,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1b1b1b;
+    /*background-color: #1B9BB1; /* Aqui se cambia el color */
+    /*background-color: #0896AF;*/
+    background-color: #078196;
 }
 
 nav{

@@ -143,7 +143,8 @@ function InfoAlumno() {
         {tipo[datos].datos.map((item, i) => (
           <div className="infoTrabajo">
             <table className="tablaTrabajosAlumno">
-              {tipo[datos].años[i] != undefined && (
+              {tipo[datos].años[i] !=
+                undefined /* Creo solo hay que quitar esta condicion para que se vean los videos */ && (
                 <tr>
                   {console.log("esta vacio: ", tipo[datos].años[i])}
                   <td className="celdaNombre celda">

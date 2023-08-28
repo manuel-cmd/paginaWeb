@@ -123,7 +123,8 @@
 
 .perfil{
     letter-spacing: 0.5rem;    
-    font-size: larger;
+    font-size: x-large;
     text-decoration: none;
-    color: #ead1a2;
+    /*color: #ead1a2;*/
+    color: #078196;
 }

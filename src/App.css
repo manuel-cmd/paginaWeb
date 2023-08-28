@@ -7,6 +7,18 @@
   pointer-events: none;
 }
 
+body{ /* Se agregra este body*/
+  /*background-color:#A6C0F4;*/
+  /*background-color: #D7E6E9;*/
+  /*background-color: #C5EFF6;*/
+  background-color: #EAEDED;
+} /* Hasta aqui*/
+
+a {/* Todo esto tambien se agrega */
+  text-decoration: none;
+  color: #078196;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

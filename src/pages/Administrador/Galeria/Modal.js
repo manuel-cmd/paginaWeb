@@ -9,13 +9,23 @@ const Modal = ({
   setDescriptionImage,
 }) => {
   const handleClick = (e) => {
-    if (e.target.classList.contains("dismiss")) {
+    if (e.target.classList.contains("dismiss") || e.keyCode === 27) {
+      setClickImage(null);
+    }
+  };
+
+  const handleEsc = (e) => {
+    if (e.keyCode === 27) {
       setClickImage(null);
     }
   };
 
   const handleKeyDown = (e) => {
     console.log("almenos detecta algo");
+    if (e.keyCode === 27) {
+      console.log("debe cerrar");
+      setClickImage(null);
+    }
     if (e.keyCode === 37) {
       console.log("a la izquierda");
       handleRotationLeft();
@@ -29,12 +39,24 @@ const Modal = ({
   document.onkeydown = handleKeyDown;
 
   return (
-    <div className="overlay dismiss" onClick={handleClick}>
+    <div
+      className="overlay dismiss"
+      onClick={handleClick}
+      onKeyDown={handleEsc}
+    >
       <div className="imagenDeGaleria">
         <div className="imagenBien">
-          <img src={require(`./img/${clickImage}`)} alt="bigger picture" />
+          <img
+            src={require(`./img/${clickImage}`)}
+            alt="bigger picture"
+            className="imagenFinal"
+          />
         </div>
-        <div className="informacionImagen">Descripcion: {descriptionImage}</div>
+        {descriptionImage != "" && (
+          <div className="informacionImagen">
+            Descripcion: {descriptionImage}
+          </div>
+        )}
       </div>
       <span className="dismiss" onClick={handleClick}>
         X

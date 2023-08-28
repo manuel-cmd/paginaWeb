@@ -1,6 +1,6 @@
-const datos = [
+/*const datos = [
   // Del A18
-  {
+  /*{
     semestre: "A18",
     alumnos: [
       // Byron Gonzalez
@@ -829,12 +829,11 @@ const datos = [
       },
     ],
   },*/ // Plantilla
-];
+/*]/*;
 
-export default datos;
+export default datos;*/
 
-/**
- * const datos = [
+const datos = [
   // Del A18
   {
     semestre: "A18",
@@ -861,18 +860,6 @@ export default datos;
             nombre: "Notas",
             datos: ["Probabilidad, procesos aleatorios e inferencia (Archivo)"],
             años: ["img/videosA18/byron_gonzalez.pdf"],
-            tipo: ["Documento"],
-          },
-          {
-            nombre: "Artículos",
-            datos: [],
-            años: [],
-            tipo: ["Documento"],
-          },
-          {
-            nombre: "Trabajos",
-            datos: [],
-            años: [],
             tipo: ["Documento"],
           },
         ],
@@ -908,18 +895,6 @@ export default datos;
             años: ["img/videosB17/daniel_valganon.pdf"],
             tipo: ["Documento"],
           },
-          {
-            nombre: "",
-            datos: [],
-            años: [],
-            tipo: [""],
-          },
-          {
-            nombre: "",
-            datos: [],
-            años: [],
-            tipo: [""],
-          },
         ],
       },
       // Ivan Rosales
@@ -945,18 +920,6 @@ export default datos;
             datos: ["Probabilidad, procesos aleatorios e inferencia"],
             años: ["img/videosB17/ivan_rosales.pdf"],
             tipo: ["Documento"],
-          },
-          {
-            nombre: "",
-            datos: [],
-            años: [],
-            tipo: [""],
-          },
-          {
-            nombre: "",
-            datos: [],
-            años: [],
-            tipo: [""],
           },
         ],
       },
@@ -1146,18 +1109,6 @@ export default datos;
             datos: ["Probabilidad, Procesos Aleatorios e Inferencia"],
             años: ["img/videosB16/Apuntes_Miguel_Martinez.pdf"],
             tipo: ["Documento"],
-          },
-          {
-            nombre: "",
-            datos: [],
-            años: [],
-            tipo: [""],
-          },
-          {
-            nombre: "",
-            datos: [],
-            años: [],
-            tipo: [""],
           },
         ],
       },
@@ -1679,6 +1630,6 @@ export default datos;
       },
     ],
   },*/ // Plantilla/*
-/*];
+];
 
-export default datos;*/
+export default datos;
